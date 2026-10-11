@@ -1,0 +1,337 @@
+{
+	"action_log": [
+		{
+			"action_index": 0,
+			"action_type": "setup",
+			"details": {
+				"layout": "standard_8x8",
+				"piece_count": 32
+			},
+			"turn_number": 1
+		}
+	],
+	"board": {
+		"board_height": 8,
+		"board_width": 8
+	},
+	"captured_pieces": [],
+	"game_state": {
+		"active_side": "player",
+		"next_piece_number": 33,
+		"pending_bonus_piece_id": "",
+		"rng_seed": 20261011,
+		"rng_state": "",
+		"turn_number": 1
+	},
+	"ledger_version": 1,
+	"piece_stats": {
+		"bishop": {
+			"die_sides": 6
+		},
+		"king": {
+			"die_sides": 12
+		},
+		"knight": {
+			"die_sides": 6
+		},
+		"pawn": {
+			"die_sides": 4
+		},
+		"queen": {
+			"die_sides": 10
+		},
+		"rook": {
+			"die_sides": 8
+		}
+	},
+	"pieces": {
+		"pc_001": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_001",
+			"piece_type": "rook",
+			"side": "rival",
+			"tile_x": 0,
+			"tile_y": 0
+		},
+		"pc_002": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_002",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 0,
+			"tile_y": 1
+		},
+		"pc_003": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_003",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 0,
+			"tile_y": 6
+		},
+		"pc_004": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_004",
+			"piece_type": "rook",
+			"side": "player",
+			"tile_x": 0,
+			"tile_y": 7
+		},
+		"pc_005": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_005",
+			"piece_type": "knight",
+			"side": "rival",
+			"tile_x": 1,
+			"tile_y": 0
+		},
+		"pc_006": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_006",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 1,
+			"tile_y": 1
+		},
+		"pc_007": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_007",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 1,
+			"tile_y": 6
+		},
+		"pc_008": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_008",
+			"piece_type": "knight",
+			"side": "player",
+			"tile_x": 1,
+			"tile_y": 7
+		},
+		"pc_009": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_009",
+			"piece_type": "bishop",
+			"side": "rival",
+			"tile_x": 2,
+			"tile_y": 0
+		},
+		"pc_010": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_010",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 2,
+			"tile_y": 1
+		},
+		"pc_011": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_011",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 2,
+			"tile_y": 6
+		},
+		"pc_012": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_012",
+			"piece_type": "bishop",
+			"side": "player",
+			"tile_x": 2,
+			"tile_y": 7
+		},
+		"pc_013": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_013",
+			"piece_type": "queen",
+			"side": "rival",
+			"tile_x": 3,
+			"tile_y": 0
+		},
+		"pc_014": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_014",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 3,
+			"tile_y": 1
+		},
+		"pc_015": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_015",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 3,
+			"tile_y": 6
+		},
+		"pc_016": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_016",
+			"piece_type": "queen",
+			"side": "player",
+			"tile_x": 3,
+			"tile_y": 7
+		},
+		"pc_017": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_017",
+			"piece_type": "king",
+			"side": "rival",
+			"tile_x": 4,
+			"tile_y": 0
+		},
+		"pc_018": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_018",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 4,
+			"tile_y": 1
+		},
+		"pc_019": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_019",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 4,
+			"tile_y": 6
+		},
+		"pc_020": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_020",
+			"piece_type": "king",
+			"side": "player",
+			"tile_x": 4,
+			"tile_y": 7
+		},
+		"pc_021": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_021",
+			"piece_type": "bishop",
+			"side": "rival",
+			"tile_x": 5,
+			"tile_y": 0
+		},
+		"pc_022": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_022",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 5,
+			"tile_y": 1
+		},
+		"pc_023": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_023",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 5,
+			"tile_y": 6
+		},
+		"pc_024": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_024",
+			"piece_type": "bishop",
+			"side": "player",
+			"tile_x": 5,
+			"tile_y": 7
+		},
+		"pc_025": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_025",
+			"piece_type": "knight",
+			"side": "rival",
+			"tile_x": 6,
+			"tile_y": 0
+		},
+		"pc_026": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_026",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 6,
+			"tile_y": 1
+		},
+		"pc_027": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_027",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 6,
+			"tile_y": 6
+		},
+		"pc_028": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_028",
+			"piece_type": "knight",
+			"side": "player",
+			"tile_x": 6,
+			"tile_y": 7
+		},
+		"pc_029": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_029",
+			"piece_type": "rook",
+			"side": "rival",
+			"tile_x": 7,
+			"tile_y": 0
+		},
+		"pc_030": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_030",
+			"piece_type": "pawn",
+			"side": "rival",
+			"tile_x": 7,
+			"tile_y": 1
+		},
+		"pc_031": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_031",
+			"piece_type": "pawn",
+			"side": "player",
+			"tile_x": 7,
+			"tile_y": 6
+		},
+		"pc_032": {
+			"has_moved": false,
+			"next_defense_modifier": 0,
+			"piece_id": "pc_032",
+			"piece_type": "rook",
+			"side": "player",
+			"tile_x": 7,
+			"tile_y": 7
+		}
+	}
+}

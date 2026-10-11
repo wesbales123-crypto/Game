@@ -1,0 +1,6 @@
+; Engine configuration file. Minimal project so scripts can be imported and tested headless.
+config_version=5
+
+[application]
+config/name="Keeper's Gambit (backend)"
+config/features=PackedStringArray("4.7")

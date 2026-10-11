@@ -1,0 +1,120 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+
+[dice basics]
+  PASS d4/d6 cannot crit or fumble
+  PASS d8/d10/d12 can crit and fumble
+  PASS step_up d4->d6, d12->d12
+  PASS seeded rolls reproducible
+  PASS d12 rolls in 1..12 and all faces seen
+
+[resolve cases]
+  PASS d4 4 vs d12 4 -> tie, defender wins
+  PASS d8 8 vs d12 12 -> crit beats higher roll
+  PASS d8 natural 1 -> fumble
+  PASS d8 natural 1 +2 Surge still fumble
+  PASS d6 natural 1 is a normal miss
+  PASS d6 natural 6 is not a crit
+  PASS d12 max is crit
+  PASS defense -1 flips a tie
+
+[exact odds, all pairs: attacker row vs defender]
+    d4  vs d4   capture=6/16 (0.3750) crit=0 fumble=0 plain_win=6 def_win=10 ties=4
+    d4  vs d6   capture=6/24 (0.2500) crit=0 fumble=0 plain_win=6 def_win=18 ties=4
+    d4  vs d8   capture=6/32 (0.1875) crit=0 fumble=0 plain_win=6 def_win=26 ties=4
+    d4  vs d10  capture=6/40 (0.1500) crit=0 fumble=0 plain_win=6 def_win=34 ties=4
+    d4  vs d12  capture=6/48 (0.1250) crit=0 fumble=0 plain_win=6 def_win=42 ties=4
+    d6  vs d4   capture=14/24 (0.5833) crit=0 fumble=0 plain_win=14 def_win=10 ties=4
+    d6  vs d6   capture=15/36 (0.4167) crit=0 fumble=0 plain_win=15 def_win=21 ties=6
+    d6  vs d8   capture=15/48 (0.3125) crit=0 fumble=0 plain_win=15 def_win=33 ties=6
+    d6  vs d10  capture=15/60 (0.2500) crit=0 fumble=0 plain_win=15 def_win=45 ties=6
+    d6  vs d12  capture=15/72 (0.2083) crit=0 fumble=0 plain_win=15 def_win=57 ties=6
+    d8  vs d4   capture=22/32 (0.6875) crit=4 fumble=4 plain_win=18 def_win=6 ties=3
+    d8  vs d6   capture=27/48 (0.5625) crit=6 fumble=6 plain_win=21 def_win=15 ties=5
+    d8  vs d8   capture=29/64 (0.4531) crit=8 fumble=8 plain_win=21 def_win=27 ties=6
+    d8  vs d10  capture=31/80 (0.3875) crit=10 fumble=10 plain_win=21 def_win=39 ties=6
+    d8  vs d12  capture=33/96 (0.3438) crit=12 fumble=12 plain_win=21 def_win=51 ties=6
+    d10 vs d4   capture=30/40 (0.7500) crit=4 fumble=4 plain_win=26 def_win=6 ties=3
+    d10 vs d6   capture=39/60 (0.6500) crit=6 fumble=6 plain_win=33 def_win=15 ties=5
+    d10 vs d8   capture=44/80 (0.5500) crit=8 fumble=8 plain_win=36 def_win=28 ties=7
+    d10 vs d10  capture=46/100 (0.4600) crit=10 fumble=10 plain_win=36 def_win=44 ties=8
+    d10 vs d12  capture=48/120 (0.4000) crit=12 fumble=12 plain_win=36 def_win=60 ties=8
+    d12 vs d4   capture=38/48 (0.7917) crit=4 fumble=4 plain_win=34 def_win=6 ties=3
+    d12 vs d6   capture=51/72 (0.7083) crit=6 fumble=6 plain_win=45 def_win=15 ties=5
+    d12 vs d8   capture=60/96 (0.6250) crit=8 fumble=8 plain_win=52 def_win=28 ties=7
+    d12 vs d10  capture=65/120 (0.5417) crit=10 fumble=10 plain_win=55 def_win=45 ties=9
+    d12 vs d12  capture=67/144 (0.4653) crit=12 fumble=12 plain_win=55 def_win=65 ties=10
+  PASS d10 vs d4 capture = 30/40  capture=30/40 (0.7500) crit=4 fumble=4 plain_win=26 def_win=6 ties=3
+  PASS d10 vs d4 crit 4, fumble 4, def_win 6, ties 3
+  PASS d4 vs d4 capture = 6/16, no crit/fumble  capture=6/16 (0.3750) crit=0 fumble=0 plain_win=6 def_win=10 ties=4
+  PASS d12 vs d12 capture = 67/144  capture=67/144 (0.4653) crit=12 fumble=12 plain_win=55 def_win=65 ties=10
+  PASS probabilities sum to 1
+  PASS bonus-action odds d8 vs d12: no crits, capture 28/96  capture=28/96 (0.2917) crit=0 fumble=12 plain_win=28 def_win=56 ties=7
+    d4+2 (Surge) vs d4  capture=13/16 (0.8125) crit=0 fumble=0 plain_win=13 def_win=3 ties=2
+
+[monte carlo, seed 12345, 200000 trials]
+  PASS MC d10 vs d4 within 0.01 of exact  exact=0.7500 mc=0.7502 crit_mc=0.0997 fumble_mc=0.0994
+  PASS MC d4 vs d10 within 0.01 of exact  exact=0.1500 mc=0.1503 crit_mc=0.0000 fumble_mc=0.0000
+  PASS MC d8 vs d8 within 0.01 of exact  exact=0.4531 mc=0.4538 crit_mc=0.1246 fumble_mc=0.1246
+  PASS MC d12 vs d6 within 0.01 of exact  exact=0.7083 mc=0.7101 crit_mc=0.0835 fumble_mc=0.0835
+
+[ledger round trip]
+  PASS player pawn double-step
+  PASS rival pawn double-step
+  PASS wrong-side move rejected
+  PASS random pawn attack resolved  result=attacker_win
+  PASS save ok
+  PASS load ok and valid
+  PASS JSON identical after round trip
+  PASS ints stay ints after load
+  PASS action_log length kept  entries=7
+  PASS rng continues identically after reload
+  PASS tampered (non-sequential) log rejected
+
+[crit push-back / crush]
+  PASS attack ok and is crit
+  PASS target captured
+  PASS rook moved into (1,3)
+  PASS edge push -> crushed
+  PASS push into empty -> moved to (3,1)
+  PASS push into own-side piece -> crushed
+  PASS push into enemy piece -> crushed
+  PASS non-adjacent piece untouched
+  PASS attacker's friends untouched
+  PASS 4 pushes recorded  [{ "piece_id": "pc_005", "from": [1, 2], "to": [1, 1], "crushed": true }, { "piece_id": "pc_004", "from": [2, 2], "to": [3, 1], "crushed": false }, { "piece_id": "pc_003", "from": [0, 3], "to": [-1, 3], "crushed": true }, { "piece_id": "pc_007", "from": [2, 3], "to": [3, 3], "crushed": true }]
+  PASS bonus action pending, turn not passed
+  PASS other piece cannot use bonus
+  PASS rook uses bonus move
+  PASS turn passed after bonus
+  PASS captured_pieces has 4
+  PASS crit attack logged is_bonus_action=false
+  PASS bonus move logged is_bonus_action=true
+
+[normal win / tie / fumble debuff]
+  PASS queen natural 1 -> fumble, both survive
+  PASS fumble: -1 defense stored, turn ended
+  PASS rook 5 vs queen 5-1=4 -> rook wins via debuff
+  PASS pawn tie -> attacker removed, defender stays
+
+[bonus action: max roll is NOT a crit, no chain, no push]
+  PASS first attack is a real crit
+  PASS bonus granted to rook
+  PASS bonus attack natural 8 -> attacker_win, not crit
+  PASS bonus attack: defender removed, rook moved in
+  PASS bonus attack: no pushes
+  PASS bonus attack: adjacent enemies untouched
+  PASS no further bonus, turn passed
+  PASS exactly one bonus_action_granted in log
+  PASS log: attack1 is_bonus_action=false, attack2 true
+  PASS rook cannot act again this turn
+  PASS t1 captured
+
+[bonus action: fumble still applies]
+  PASS queen crit grants bonus
+  PASS bonus attack natural 1 (+2 Surge) -> fumble
+  PASS fumble on bonus: nobody removed, queen stays
+  PASS fumble -1 does not stack
+  PASS fumble on bonus: turn passed
+  PASS t1 captured by first crit
+
+RESULT: 72 passed, 0 failed
